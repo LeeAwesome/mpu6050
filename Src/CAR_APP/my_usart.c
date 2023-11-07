@@ -1,7 +1,20 @@
 #include "my_usart.h"
 #include "stdlib.h"
 #include "usart.h"
+#include "control.h"
+#include <string.h>
 
+
+extern struct pid_arg PID;
+
+void ProcessReceiveData(uint8_t *data, uint16_t size)
+{
+	if(size == sizeof(PID))
+	{
+		memcpy(&PID, data, size);
+		
+	}
+}
 User_USART BT_Data;	
 
 // initialize pack for data recesiving Rx
@@ -29,8 +42,9 @@ void BTData_Process(uint8_t *RxBuffer)
     BT_Data.mode = RxBuffer[3];
     BT_Data.rxflag = RxBuffer[4];
 
-
 }
+
+
 
 
 

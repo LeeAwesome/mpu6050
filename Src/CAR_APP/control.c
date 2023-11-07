@@ -42,7 +42,6 @@ int	Vertical_Ring_PD(float Angle,float Gyro)
 	return balance;
 }
 
-
 int Vertical_speed_PI(int encoder_left,int encoder_right,float Angle,float Movement )
 {
 	static float Velocity, Encoder_Least, Encoder;
@@ -64,8 +63,6 @@ int Vertical_speed_PI(int encoder_left,int encoder_right,float Angle,float Movem
 	return Velocity;
 }
 
-
-
 int Vertical_turn_PD(float taget_yaw, float yaw, float gyro)
 {
     float Turn;
@@ -77,8 +74,6 @@ int Vertical_turn_PD(float taget_yaw, float yaw, float gyro)
     Turn = -Bias_yaw*PID.Turn_Kp - gyro*PID.Turn_Kd;
     return Turn;
 }
-
-
 
 void PWM_Limiting(int *motor1,int *motor2)
 {
@@ -109,7 +104,6 @@ u8 Turn_off(const float Angle)
 	return temp;
 }
 
-
 void Set_PWM(int motor1,int motor2)
 {
     if(motor1>0)
@@ -134,4 +128,9 @@ void Set_PWM(int motor1,int motor2)
     {   PWMB2 = 0;
         PWMB1=Dead_Zone+(abs(motor2))*1.17;
     }
+}
+
+void ApplyPIDParameters(struct pid_arg *params) {
+    PID = *params;
+
 }

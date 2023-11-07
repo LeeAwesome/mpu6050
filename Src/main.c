@@ -122,8 +122,9 @@ int main(void)
 	
 	User_USART_Init(&BT_Data);
 	// blue thooth 
+	
   HAL_UART_Receive_DMA(&huart3,BT_Data.RxBuffer,RXBUFFER_LEN);
-	__HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);//�?启串口空闲中�?
+	__HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);
 		
 	__HAL_TIM_ENABLE_IT(&htim3, TIM_IT_UPDATE);
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);

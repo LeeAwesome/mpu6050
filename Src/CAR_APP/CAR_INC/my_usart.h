@@ -15,15 +15,15 @@ typedef struct User_USART
 		uint8_t RxBuffer[RXBUFFER_LEN];		//数据存储
 }User_USART;
 
-typedef struct tx_pack
-{
-		uint8_t Rx_flag;									//接收完成标志
-		uint8_t Rx_len;										//接收长度
-		uint8_t frame_head;						//帧头
-		uint8_t frame_tail;								//帧尾
-		int x,y,mode,rxflag;
-		uint8_t RxBuffer[RXBUFFER_LEN];		//数据存储
-}tx_pack;
+
+typedef struct {
+    float Balance_Kp;
+    float Balance_Kd;
+    float Velocity_Kp;
+    float Velocity_Ki;
+    float Turn_Kp;
+    float Turn_Kd;
+} PID_Params;
 
 
 extern User_USART BT_Data;

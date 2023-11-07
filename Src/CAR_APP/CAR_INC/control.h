@@ -51,6 +51,7 @@ int Vertical_turn_PD(float taget_yaw,float yaw,float gyro);
 void PWM_Limiting(int *motor1,int *motor2);
 u8 Turn_off(const float Angle);
 void Set_PWM(int motor1,int motor2);
+void ApplyPIDParameters(struct pid_arg *params);
 
 
 #endif
