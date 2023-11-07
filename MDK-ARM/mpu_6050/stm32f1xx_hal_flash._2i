@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL
+-I.\RTE\_mpu6050
+-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"
+-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"
+-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB
+-o mpu_6050\stm32f1xx_hal_flash.o --omf_browse mpu_6050\stm32f1xx_hal_flash.crf --depend mpu_6050\stm32f1xx_hal_flash.d --feedback "mpu_6050\mpu_6050.fed" "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c"
