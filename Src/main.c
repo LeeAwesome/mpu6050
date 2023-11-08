@@ -60,7 +60,7 @@ void MX_FREERTOS_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-// printf & blue tooth sent out functionï¼? USART3 Blue Tooth
+// printf & blue tooth sent out functionï¿½? USART3 Blue Tooth
 
 int fputc(int ch, FILE *fp)
 {
@@ -80,7 +80,6 @@ int fgetc(FILE *f)
     HAL_UART_Receive(&huart3, &ch, 1, 0xffff);
     return ch;
 }
-
 
 /* USER CODE END 0 */
 
@@ -125,7 +124,6 @@ int main(void)
 	
   HAL_UART_Receive_DMA(&huart3,BT_Data.RxBuffer,RXBUFFER_LEN);
 	__HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);
-		
 	__HAL_TIM_ENABLE_IT(&htim3, TIM_IT_UPDATE);
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);

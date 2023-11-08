@@ -18,7 +18,7 @@ int Motor1, Motor2;
 int Contrl_Turn = 64;//
 
 int rxloss_flag = 1,avoidance_flag = 0;
-int rx_cnt = 0;//Ê§¿Ø±ê¼Ç
+int rx_cnt = 0;//Ê§ï¿½Ø±ï¿½ï¿½
 
 float Movement = 0; // target speed
 float target_yaw = 0; // target turn yaw
@@ -43,7 +43,7 @@ void Car_Task_100HZ(void)
 	Velocity_PWM = Vertical_speed_PI(Encoder_left, Encoder_right, outMpu.pitch, Movement);
 
 	// 3. turn PWM
-  Turn_PWM = - Vertical_turn_PD(target_yaw, outMpu.yaw, outMpu.gyro_z);
+  	Turn_PWM = - Vertical_turn_PD(target_yaw, outMpu.yaw, outMpu.gyro_z);
 	
 	// 4. final PWM of Left & Right Motor
 	Motor1 = Balance_PWM + Velocity_PWM + Turn_PWM;

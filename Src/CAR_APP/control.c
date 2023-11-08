@@ -4,7 +4,7 @@
 #include "control.h"
 
 
-int   Dead_Zone=4350; //left 4450 right 4350  
+int  Dead_Zone=4350; //left 4450 right 4350  
 
 
 //PID parameter9
@@ -18,6 +18,8 @@ struct pid_arg PID = {
 	.Turn_Kp = 0, // 25
 	.Turn_Kd = 0, //0.5
 };
+
+
 
 int Read_Encoder(u8 TIMX)
 {
@@ -130,7 +132,19 @@ void Set_PWM(int motor1,int motor2)
     }
 }
 
-void ApplyPIDParameters(struct pid_arg *params) {
-    PID = *params;
+void ApplyPIDParameters(struct pid_arg *new_params) 
+{
+
+    if (new_params == NULL) 
+	{
+        return;
+    }
+
+    PID.Balance_Kp = new_params->Balance_Kp;
+    PID.Balance_Kd = new_params->Balance_Kd;
+    PID.Velocity_Kp = new_params->Velocity_Kp;
+    PID.Velocity_Ki = new_params->Velocity_Ki;
+    PID.Turn_Kp = new_params->Turn_Kp;
+    PID.Turn_Kd = new_params->Turn_Kd;
 
 }

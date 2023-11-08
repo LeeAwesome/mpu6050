@@ -7,24 +7,21 @@
 
 typedef struct User_USART
 {
-		uint8_t Rx_flag;									//接收完成标志
-		uint8_t Rx_len;										//接收长度
-		uint8_t frame_head;						//帧头
-		uint8_t frame_tail;								//帧尾
-		int x,y,mode,rxflag;
-		uint8_t RxBuffer[RXBUFFER_LEN];		//数据存储
-}User_USART;
+    uint8_t Rx_flag;          // 鎺ユ敹瀹屾垚鏍囧織
+    uint8_t Rx_len;           // 鎺ユ敹闀垮害
+    uint8_t frame_head;       // 甯уご
+    uint8_t frame_tail;       // 甯у熬
 
-
-typedef struct {
     float Balance_Kp;
     float Balance_Kd;
     float Velocity_Kp;
     float Velocity_Ki;
     float Turn_Kp;
     float Turn_Kd;
-} PID_Params;
 
+    uint8_t RxBuffer[RXBUFFER_LEN]; // 鏁版嵁瀛樺偍
+
+} User_USART;
 
 extern User_USART BT_Data;
 void BTData_Process(uint8_t *RxBuffer);
