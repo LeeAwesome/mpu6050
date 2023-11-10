@@ -1,4 +1,4 @@
-;#<FEEDBACK># ARM Linker, 5060960: Last Updated: Tue Nov 07 21:43:41 2023
+;#<FEEDBACK># ARM Linker, 5060960: Last Updated: Fri Nov 10 11:18:47 2023
 ;VERSION 0.2
 ;FILE car_task.o
 __asm___10_car_task_c_Turn_PWM____REV16 <= USED 0
@@ -59,7 +59,6 @@ osTimerDelete <= USED 0
 osTimerStart <= USED 0
 osTimerStop <= USED 0
 ;FILE control.o
-ApplyPIDParameters <= USED 0
 __asm___9_control_c_d8060a58____REV16 <= USED 0
 __asm___9_control_c_d8060a58____REVSH <= USED 0
 __asm___9_control_c_d8060a58____RRX <= USED 0
@@ -163,11 +162,9 @@ __asm___9_mpu6050_c_MPU_Init____REV16 <= USED 0
 __asm___9_mpu6050_c_MPU_Init____REVSH <= USED 0
 __asm___9_mpu6050_c_MPU_Init____RRX <= USED 0
 ;FILE my_usart.o
-BTData_Process <= USED 0
-ProcessReceiveData <= USED 0
-__asm___10_my_usart_c_af3afe55____REV16 <= USED 0
-__asm___10_my_usart_c_af3afe55____REVSH <= USED 0
-__asm___10_my_usart_c_af3afe55____RRX <= USED 0
+__asm___10_my_usart_c_e3e91cfb____REV16 <= USED 0
+__asm___10_my_usart_c_e3e91cfb____REVSH <= USED 0
+__asm___10_my_usart_c_e3e91cfb____RRX <= USED 0
 ;FILE port.o
 vPortEndScheduler <= USED 0
 vPortGetIPSR <= USED 0
@@ -496,7 +493,6 @@ HAL_UART_AbortTransmit_IT <= USED 0
 HAL_UART_Abort_IT <= USED 0
 HAL_UART_DMAPause <= USED 0
 HAL_UART_DMAResume <= USED 0
-HAL_UART_DMAStop <= USED 0
 HAL_UART_DeInit <= USED 0
 HAL_UART_GetError <= USED 0
 HAL_UART_GetState <= USED 0

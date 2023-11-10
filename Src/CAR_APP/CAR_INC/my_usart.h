@@ -3,7 +3,7 @@
 
 #include "main.h"
 
-#define RXBUFFER_LEN 20
+#define RXBUFFER_LEN 26
 
 typedef struct User_USART
 {
@@ -26,6 +26,8 @@ typedef struct User_USART
 extern User_USART BT_Data;
 void BTData_Process(uint8_t *RxBuffer);
 void User_USART_Init(User_USART *Data);
+void UpdatePIDParamsToControl(void);
+
 #endif
 
 

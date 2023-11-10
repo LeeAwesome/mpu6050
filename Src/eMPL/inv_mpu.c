@@ -3023,7 +3023,7 @@ uint8_t mpu_dmp_get_data(float *pitch,float *roll,float *yaw)
         float drift_compensation = 0.00455f * (time_now_ms / 1000.0f) + 0.4344f; // Calculate drift compensation
 //        *yaw   = atan2(2*(q1*q2 + q0*q3),q0*q0+q1*q1-q2*q2-q3*q3) * 57.3;	//yaw original
         *yaw   = atan2(2*(q1*q2 + q0*q3),q0*q0+q1*q1-q2*q2-q3*q3) * 57.3 - drift_compensation;
-				printf("time_now_ms: %lu, original yaw: %f, adjusted yaw: %f\n", (unsigned long)time_now_ms, *yaw, *yaw - drift_compensation);
+//				printf("time_now_ms: %lu, original yaw: %f, adjusted yaw: %f\n", (unsigned long)time_now_ms, *yaw, *yaw - drift_compensation);
 
 
 

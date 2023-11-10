@@ -6,8 +6,6 @@
 #include "echo.h"
 #include "my_usart.h"
 #include "usart.h"
-#define RXBUFFER_LEN 20
-
 
 // global data
 struct mpu6050_data outMpu;
@@ -18,7 +16,7 @@ int Motor1, Motor2;
 int Contrl_Turn = 64;//
 
 int rxloss_flag = 1,avoidance_flag = 0;
-int rx_cnt = 0;//ʧ�ر��
+int rx_cnt = 0;
 
 float Movement = 0; // target speed
 float target_yaw = 0; // target turn yaw
@@ -69,10 +67,10 @@ void Car_Task_5HZ(void)
 
 void Car_Task_Interaction(void)
 {
-		printf("mpu:%f,%f,%f\n", outMpu.pitch, outMpu.roll, outMpu.yaw);
-		printf("encoder:%d,%d\n", Encoder_left, Encoder_right);
-		printf("balance_pwm:%d\n", Balance_PWM);
-		printf("dis:%f\n", dis);
+//		printf("mpu:%f,%f,%f\n", outMpu.pitch, outMpu.roll, outMpu.yaw);
+//		printf("encoder:%d,%d\n", Encoder_left, Encoder_right);
+//		printf("balance_pwm:%d\n", Balance_PWM);
+//		printf("dis:%f\n", dis);
 		
 }
 

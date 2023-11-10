@@ -22,6 +22,10 @@
 #include "stm32f1xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "CAR_TASK.h"
+#include "my_usart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -239,7 +243,26 @@ void TIM3_IRQHandler(void)
 void USART3_IRQHandler(void)
 {
   /* USER CODE BEGIN USART3_IRQn 0 */
+	if( __HAL_UART_GET_FLAG(&huart3,UART_FLAG_IDLE) !=RESET)//如果是空闲中断
+	{
 
+		uint32_t temp_flag = 0;
+		uint32_t temp;
+		temp_flag = __HAL_UART_GET_FLAG(&huart3,UART_FLAG_IDLE);
+	if((temp_flag!=RESET))																
+	{
+			__HAL_UART_CLEAR_IDLEFLAG(&huart3);
+			temp = huart3.Instance->SR;   										
+			temp = huart3.Instance->DR; 										
+			HAL_UART_DMAStop(&huart3);   									
+			temp = hdma_usart3_rx.Instance->CNDTR; 	
+			
+			BT_Data.Rx_len = RXBUFFER_LEN-temp;  				
+			BTData_Process(BT_Data.RxBuffer);					//按照自己需求改写这个函数						
+			BT_Data.Rx_flag = 1;
+			HAL_UART_Receive_DMA(&huart3,BT_Data.RxBuffer,RXBUFFER_LEN);//重新开启dma
+	}
+	}
   /* USER CODE END USART3_IRQn 0 */
   HAL_UART_IRQHandler(&huart3);
   /* USER CODE BEGIN USART3_IRQn 1 */

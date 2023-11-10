@@ -31,3 +31,4 @@ mpu_6050\control.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 mpu_6050\control.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 mpu_6050\control.o: ..\Src\CAR_APP\CAR_INC\control.h
 mpu_6050\control.o: ..\Src\CAR_APP\CAR_INC\sys.h
+mpu_6050\control.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

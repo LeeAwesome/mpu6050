@@ -1,7 +1,7 @@
 Dependencies for Project 'mpu6050', Target 'mpu6050': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32f103xb.s)(0x654511A6)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\Inc-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f103xb.lst --xref -o mpu_6050\startup_stm32f103xb.o --depend mpu_6050\startup_stm32f103xb.d)
-F (../Src/main.c)(0x654A3EEE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\main.o --omf_browse mpu_6050\main.crf --depend mpu_6050\main.d)
+F (../Src/main.c)(0x654C6FAA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\main.o --omf_browse mpu_6050\main.crf --depend mpu_6050\main.d)
 I (../Inc/main.h)(0x654511A4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x651E4BCD)
 I (../Inc/stm32f1xx_hal_conf.h)(0x654511A3)
@@ -49,7 +49,7 @@ I (../Inc/tim.h)(0x654511A3)
 I (../Inc/usart.h)(0x654511A3)
 I (../Inc/gpio.h)(0x654511A2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
-I (..\Src\CAR_APP\CAR_INC\my_usart.h)(0x654A3EEE)
+I (..\Src\CAR_APP\CAR_INC\my_usart.h)(0x654DA0F9)
 F (../Src/gpio.c)(0x654511A2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\gpio.o --omf_browse mpu_6050\gpio.crf --depend mpu_6050\gpio.d)
 I (../Inc/gpio.h)(0x654511A2)
 I (../Inc/main.h)(0x654511A4)
@@ -219,7 +219,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x651E4BCD)
-F (../Src/stm32f1xx_it.c)(0x654511A3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\stm32f1xx_it.o --omf_browse mpu_6050\stm32f1xx_it.crf --depend mpu_6050\stm32f1xx_it.d)
+F (../Src/stm32f1xx_it.c)(0x654C881B)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\stm32f1xx_it.o --omf_browse mpu_6050\stm32f1xx_it.crf --depend mpu_6050\stm32f1xx_it.d)
 I (../Inc/main.h)(0x654511A4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x651E4BCD)
 I (../Inc/stm32f1xx_hal_conf.h)(0x654511A3)
@@ -249,6 +249,17 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x651E4BCD)
 I (../Inc/stm32f1xx_it.h)(0x654511A3)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x651E4B79)
+I (../Inc/FreeRTOSConfig.h)(0x654511A3)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x651E4B79)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x651E4B79)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x651E4B79)
+I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h)(0x651E4B79)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x651E4B79)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x651E4B79)
+I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x651E4B79)
+I (..\Src\CAR_APP\CAR_INC\CAR_TASK.h)(0x654504F0)
+I (..\Src\CAR_APP\CAR_INC\my_usart.h)(0x654DA0F9)
 F (../Src/stm32f1xx_hal_msp.c)(0x654511A3)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\stm32f1xx_hal_msp.o --omf_browse mpu_6050\stm32f1xx_hal_msp.crf --depend mpu_6050\stm32f1xx_hal_msp.d)
 I (../Inc/main.h)(0x654511A4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x651E4BCD)
@@ -961,7 +972,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x651E4BCD)
 I (..\Src\CAR_APP\CAR_INC\mpu6050.h)(0x65217108)
 I (..\Src\CAR_APP\CAR_INC\IIC.h)(0x65217108)
 I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x6025237E)
-F (..\Src\CAR_APP\car_task.c)(0x65464948)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\car_task.o --omf_browse mpu_6050\car_task.crf --depend mpu_6050\car_task.d)
+F (..\Src\CAR_APP\car_task.c)(0x654C7904)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\car_task.o --omf_browse mpu_6050\car_task.crf --depend mpu_6050\car_task.d)
 I (..\Src\CAR_APP\CAR_INC\car_task.h)(0x654504F0)
 I (..\Src\CAR_APP\CAR_INC\mpu6050.h)(0x65217108)
 I (..\Src\CAR_APP\CAR_INC\IIC.h)(0x65217108)
@@ -999,9 +1010,9 @@ I (..\Src\CAR_APP\CAR_INC\control.h)(0x654A3EEE)
 I (..\Src\CAR_APP\CAR_INC\sys.h)(0x651E2EE8)
 I (..\Src\CAR_APP\CAR_INC\echo.h)(0x63B586D0)
 I (../Inc/main.h)(0x654511A4)
-I (..\Src\CAR_APP\CAR_INC\my_usart.h)(0x654A3EEE)
+I (..\Src\CAR_APP\CAR_INC\my_usart.h)(0x654DA0F9)
 I (../Inc/usart.h)(0x654511A3)
-F (..\Src\CAR_APP\control.c)(0x654A3EEE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\control.o --omf_browse mpu_6050\control.crf --depend mpu_6050\control.d)
+F (..\Src\CAR_APP\control.c)(0x654C98B7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\control.o --omf_browse mpu_6050\control.crf --depend mpu_6050\control.d)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x60252378)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x651E4BCD)
@@ -1033,6 +1044,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x651E4BCD)
 I (..\Src\CAR_APP\CAR_INC\control.h)(0x654A3EEE)
 I (..\Src\CAR_APP\CAR_INC\sys.h)(0x651E2EE8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 F (..\Src\CAR_APP\echo.c)(0x654512B7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\echo.o --omf_browse mpu_6050\echo.crf --depend mpu_6050\echo.d)
 I (../Inc/tim.h)(0x654511A3)
 I (../Inc/main.h)(0x654511A4)
@@ -1114,8 +1126,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x651E4BCD)
-F (..\Src\CAR_APP\my_usart.c)(0x654A3EEE)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\my_usart.o --omf_browse mpu_6050\my_usart.crf --depend mpu_6050\my_usart.d)
-I (..\Src\CAR_APP\CAR_INC\my_usart.h)(0x654A3EEE)
+F (..\Src\CAR_APP\my_usart.c)(0x654DA08D)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\my_usart.o --omf_browse mpu_6050\my_usart.crf --depend mpu_6050\my_usart.d)
+I (..\Src\CAR_APP\CAR_INC\my_usart.h)(0x654DA0F9)
 I (../Inc/main.h)(0x654511A4)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x651E4BCD)
 I (../Inc/stm32f1xx_hal_conf.h)(0x654511A3)
@@ -1145,10 +1157,11 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x651E4BCD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x651E4BCD)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
-I (../Inc/usart.h)(0x654511A3)
 I (..\Src\CAR_APP\CAR_INC\control.h)(0x654A3EEE)
 I (..\Src\CAR_APP\CAR_INC\sys.h)(0x651E2EE8)
-F (..\Src\eMPL\inv_mpu.c)(0x6546009C)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\inv_mpu.o --omf_browse mpu_6050\inv_mpu.crf --depend mpu_6050\inv_mpu.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
+F (..\Src\eMPL\inv_mpu.c)(0x654C7DEA)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\Src\CAR_APP\CAR_INC -I ..\Src\eMPL-I.\RTE\_mpu6050-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include"-I"C:\Users\Li Chong\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="536" -D_RTE_ -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o mpu_6050\inv_mpu.o --omf_browse mpu_6050\inv_mpu.crf --depend mpu_6050\inv_mpu.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x60252374)
