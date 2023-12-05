@@ -150,9 +150,6 @@ void StartTask_200HZ(void const * argument)
 //	printf("MPU Initialization\n");
 	task_flag = 1;
 
-	while(mpu_dmp_init()){};
-//	printf("MPU Initialization Complete\n");
-
 	
   /* Infinite loop */
 //	printf("200HZ Task Running\n");
@@ -181,9 +178,9 @@ void StartTask_100HZ(void const * argument)
 //	printf("100HZ task running\n");
   for(;;)
   {	
- 		Car_Task_100HZ();
-		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-    osDelay(10);
+// 		Car_Task_100HZ();
+//		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+//    osDelay(10);
   }
   /* USER CODE END StartTask_100HZ */
 }
@@ -202,8 +199,8 @@ void StartTask_5HZ(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		Car_Task_5HZ();
-    osDelay(100);
+//		Car_Task_5HZ();
+//    osDelay(100);
   }
   /* USER CODE END StartTask_5HZ */
 }
