@@ -44,9 +44,7 @@
 "mpu_6050\my_usart.o"
 "mpu_6050\inv_mpu.o"
 "mpu_6050\inv_mpu_dmp_motion_driver.o"
---library_type=microlib
---feedback "mpu_6050\mpu_6050.fed" --feedback_image=none
---strict --scatter "mpu_6050\mpu_6050.sct"
+--library_type=microlib --strict --scatter "mpu_6050\mpu_6050.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "mpu_6050.map" -o mpu_6050\mpu_6050.axf

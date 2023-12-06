@@ -752,7 +752,7 @@
       <GroupNumber>6</GroupNumber>
       <FileNumber>39</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Src\CAR_APP\car_task.c</PathWithFileName>

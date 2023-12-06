@@ -67,7 +67,7 @@ void Car_Task_5HZ(void)
 
 void Car_Task_Interaction(void)
 {
-//		printf("mpu:%f,%f,%f\n", outMpu.pitch, outMpu.roll, outMpu.yaw);
+		printf("mpu:%f,%f,%f\n", outMpu.pitch, outMpu.roll, outMpu.yaw);
 //		printf("encoder:%d,%d\n", Encoder_left, Encoder_right);
 //		printf("balance_pwm:%d\n", Balance_PWM);
 //		printf("dis:%f\n", dis);

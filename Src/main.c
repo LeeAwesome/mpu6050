@@ -60,7 +60,7 @@ void MX_FREERTOS_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-// printf & blue tooth sent out functionï¿½? USART3 Blue Tooth
+// printf & blue tooth sent out functionï¿?? USART3 Blue Tooth
 
 int fputc(int ch, FILE *fp)
 {

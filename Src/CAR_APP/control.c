@@ -9,14 +9,14 @@ int  Dead_Zone=4350; //left 4450 right 4350
 
 //PID parameter9
 struct pid_arg PID = {
-	.Balance_Kp=-400 ,//-230 245
-	.Balance_Kd=0, // -0.55
+	.Balance_Kp=-125.0 ,// -312 max
+	.Balance_Kd=-0.2, // -0.55
 	
 	.Velocity_Kp=0,//115 -48 70 100
 	.Velocity_Ki=0,//-0.24 -0.24 0.21 0.325
 	
 	.Turn_Kp = 0, // 25
-	.Turn_Kd = 0, //0.5
+	.Turn_Kd = 0 //0.5
 };
 
 
@@ -78,7 +78,7 @@ int Vertical_turn_PD(float taget_yaw, float yaw, float gyro)
 
 void PWM_Limiting(int *motor1,int *motor2)
 {
-	int Amplitude=7999;
+	int Amplitude=3120;
 	if(*motor1<-Amplitude) *motor1=-Amplitude;	
 	if(*motor1>Amplitude)  *motor1=Amplitude;	
 	if(*motor2<-Amplitude) *motor2=-Amplitude;	
