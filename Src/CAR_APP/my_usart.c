@@ -22,8 +22,7 @@ void User_USART_Init(User_USART *Data)
     Data->Turn_Kp = 0.0;
     Data->Turn_Kd = 0.0;
 		printf("User_USART_Init Complete \n");
-	
-			
+				
 }
 
 

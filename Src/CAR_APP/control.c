@@ -44,26 +44,25 @@ int	Vertical_Ring_PD(float Angle,float Gyro)
 	return balance;
 }
 
-int Vertical_speed_PI(int encoder_left,int encoder_right,float Angle,float Movement )
+// 变量定义在函数之外
+float Vertical_speed_PI(int encoder_left, int encoder_right, float Angle, float Movement, float *Encoder, float *Encoder_Integral)
 {
-	static float Velocity, Encoder_Least, Encoder;
-	static float Encoder_Integral;
+    float Encoder_Least = (encoder_left + encoder_right) - 0;
+    *Encoder = *Encoder * 0.8f + Encoder_Least * 0.2f;
 
-	Encoder_Least = (encoder_left + encoder_right) - 0;    
-	Encoder *= 0.8f;																	
-	Encoder += Encoder_Least*0.2f;    
+    *Encoder_Integral += *Encoder;
+    *Encoder_Integral -= Movement;
 
-	Encoder_Integral += Encoder;                       
-	Encoder_Integral = Encoder_Integral - Movement; 
+    if (*Encoder_Integral > 10000) *Encoder_Integral = 10000;
+    if (*Encoder_Integral < -10000) *Encoder_Integral = -10000;
 
-	if(Encoder_Integral>10000)    Encoder_Integral=10000;          
-	if(Encoder_Integral<-10000)	  Encoder_Integral=-10000;            
+    float Velocity = *Encoder * PID.Velocity_Kp + *Encoder_Integral * PID.Velocity_Ki;
 
-	Velocity = Encoder*PID.Velocity_Kp + Encoder_Integral*PID.Velocity_Ki;      
-	
-	if(Turn_off(Angle)==1)   Encoder_Integral=0;            
-	return Velocity;
+    if (Turn_off(Angle) == 1) *Encoder_Integral = 0;
+
+    return Velocity;
 }
+
 
 int Vertical_turn_PD(float taget_yaw, float yaw, float gyro)
 {
@@ -106,6 +105,7 @@ u8 Turn_off(const float Angle)
 	return temp;
 }
 
+//状态机
 void Set_PWM(int motor1,int motor2)
 {
     if(motor1>0)
@@ -139,7 +139,7 @@ void ApplyPIDParameters(struct pid_arg *new_params)
 	{
         return;
   }
-		printf("ApplyPIDParameters Work \n");
+	printf("ApplyPIDParameters Work \n");
     PID.Balance_Kp = new_params->Balance_Kp;
     PID.Balance_Kd = new_params->Balance_Kd;
     PID.Velocity_Kp = new_params->Velocity_Kp;

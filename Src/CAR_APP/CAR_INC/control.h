@@ -4,7 +4,7 @@
 #include "sys.h"
 
 
-//»úÐµ0µã
+//ï¿½ï¿½Ðµ0ï¿½ï¿½
 #define Mechanical_balance -2
 
 
@@ -23,7 +23,7 @@
 #define PWMB2   TIM3->CCR4
 
 
-extern volatile int Encoder_Left,Encoder_Right;		      //±àÂëÆ÷×óÓÒËÙ¶ÈÖµ
+extern volatile int Encoder_Left,Encoder_Right;		      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½Öµ
 
 struct pid_arg{
 	
@@ -44,7 +44,7 @@ extern struct pid_arg PID;
 
 int Read_Encoder(u8 TIMX);
 int	Vertical_Ring_PD(float Angle,float Gyro);
-int Vertical_speed_PI(int encoder_left,int encoder_right,float Angle,float Movement );
+float Vertical_speed_PI(int encoder_left, int encoder_right, float Angle, float Movement, float *Encoder, float *Encoder_Integral);
 int Vertical_turn_PD(float taget_yaw,float yaw,float gyro);
 
 
