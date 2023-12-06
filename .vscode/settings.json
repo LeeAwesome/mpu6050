@@ -2,6 +2,7 @@
     "files.associations": {
         "car_task.h": "c",
         "control.h": "c",
-        "my_usart.h": "c"
+        "my_usart.h": "c",
+        "control_private.h": "c"
     }
 }

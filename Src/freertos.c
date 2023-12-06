@@ -49,6 +49,8 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
 int task_flag = 0;
+float Encoder = 0;
+float Encoder_Integral = 0;
 /* USER CODE END Variables */
 osThreadId Task_200HZHandle;
 osThreadId Task_100HZHandle;
@@ -178,9 +180,10 @@ void StartTask_100HZ(void const * argument)
 //	printf("100HZ task running\n");
   for(;;)
   {	
-// 		Car_Task_100HZ();
-//		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-//    osDelay(10);
+    // 将 Encoder，Encoder_Least的指针传入下面的函数
+ 		Car_Task_100HZ();
+		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    osDelay(10);
   }
   /* USER CODE END StartTask_100HZ */
 }

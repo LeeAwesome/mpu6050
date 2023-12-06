@@ -28,7 +28,7 @@ void Car_Task_200HZ(void)
 }
 
 
-void Car_Task_100HZ(void)
+void Car_Task_100HZ(float *Encoder, float *Encoder_Integral)
 {
 
 	// 1. balance PWM
@@ -38,7 +38,7 @@ void Car_Task_100HZ(void)
 	Encoder_left = Read_Encoder(1);
 	Encoder_right = Read_Encoder(2);
 	
-	Velocity_PWM = Vertical_speed_PI(Encoder_left, Encoder_right, outMpu.pitch, Movement);
+	Velocity_PWM = Vertical_speed_PI(Encoder_left, Encoder_right, outMpu.pitch, Movement, &Encoder, &Encoder_Integral);
 
 	// 3. turn PWM
   	Turn_PWM = - Vertical_turn_PD(target_yaw, outMpu.yaw, outMpu.gyro_z);
